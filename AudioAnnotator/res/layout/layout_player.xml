@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<RelativeLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/textViewTimePlayed"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Small Text1"
+        android:layout_alignParentLeft="true"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+	
+    <TextView
+        android:id="@+id/textViewAudioSrcName"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Small Text2"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <TextView
+        android:id="@+id/textViewTimeRemaining"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Small Text3"
+        android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    	
+	</RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/seekBarAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="0.06" >
+
+        <ImageButton
+            android:id="@+id/buttonReverse"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:scaleType="center"
+            android:src="@drawable/backward_default" >
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/buttonForward"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#00000000"
+            android:src="@drawable/foward_default" />
+
+        <ImageButton
+            android:id="@+id/buttonPlayPause"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#00000000"
+            android:src="@drawable/play_default" />
+
+    </RelativeLayout>
+
+</LinearLayout>

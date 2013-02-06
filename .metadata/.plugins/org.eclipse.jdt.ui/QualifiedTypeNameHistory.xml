@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.karzor.audioannotator.MainActivity.DummySectionFragment"/>
+<fullyQualifiedTypeName name="android.app.ActionBar.Tab"/>
+<fullyQualifiedTypeName name="org.apache.http.conn.scheme.PlainSocketFactory"/>
+<fullyQualifiedTypeName name="android.text.InputType"/>
+<fullyQualifiedTypeName name="com.karzor.audioannotator.R.layout"/>
+<fullyQualifiedTypeName name="android.widget.RelativeLayout"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.view.View"/>
+<fullyQualifiedTypeName name="android.widget.RadioGroup"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="android.media.MediaPlayer"/>
+<fullyQualifiedTypeName name="android.media.AudioManager"/>
+<fullyQualifiedTypeName name="android.widget.TabHost"/>
+<fullyQualifiedTypeName name="android.widget.TabHost.TabSpec"/>
+<fullyQualifiedTypeName name="com.karzor.audioannotator.PlayerActivity"/>
+<fullyQualifiedTypeName name="com.karzor.audioannotator.MainActivity"/>
+<fullyQualifiedTypeName name="android.os.Bundle"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="android.app.TabActivity"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="com.karzor.audioannotator.TabPlayerActivity"/>
+<fullyQualifiedTypeName name="com.karzor.audioannotator.R.id"/>
+</qualifiedTypeNameHistroy>
