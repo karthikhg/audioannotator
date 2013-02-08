@@ -8,12 +8,14 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import android.R.raw;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +25,8 @@ import android.widget.RadioGroup;
 
 public class MainActivity extends Activity {
 	private static final int _ReqChooseFile = 0;
+	public static final int SOURCE_TYPE_FILE = 1;
+	public static final int SOURCE_TYPE_URL = 2;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -83,17 +87,14 @@ public class MainActivity extends Activity {
 		
 		EditText editTextUrl = (EditText) findViewById(R.id.editTextUrl);
 		String url = editTextUrl.getText().toString();
-/*		MediaPlayer mediaPlayer = new MediaPlayer();
-		mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-		mediaPlayer.setDataSource(url);
-		mediaPlayer.prepare(); // might take long! (for buffering, etc)
-		mediaPlayer.start();
-*/		
 		//http://www.hrupin.com/wp-content/uploads/mp3/testsong_20_sec.mp3
 		
 		Bundle sendThis = new Bundle();
-		sendThis.putString("SRC_NAME", url);
-		
+		//sendThis.
+		sendThis.putString("SOURCE_NAME", url);
+		sendThis.putInt("SOURCE_TYPE", SOURCE_TYPE_URL);
+		sendThis.putString("SOURCE_PATH", url);
+
 		Intent playerActivity = new Intent(MainActivity.this, PlayerActivity.class);
 		playerActivity.putExtras(sendThis);
 		
@@ -123,7 +124,9 @@ public class MainActivity extends Activity {
 	                data.getSerializableExtra(FileChooserActivity._Results);
 	            for (File f : files) {
 	            	Bundle sendThis = new Bundle();
-	        		sendThis.putString("SRC_NAME", f.getName());
+	        		sendThis.putString("SOURCE_NAME", f.getName());
+	        		sendThis.putInt("SOURCE_TYPE", SOURCE_TYPE_FILE);
+	        		sendThis.putString("SOURCE_PATH", f.getAbsolutePath());
 	        		
 	        		Intent playerActivity = new Intent(MainActivity.this, PlayerActivity.class);
 	        		playerActivity.putExtras(sendThis);

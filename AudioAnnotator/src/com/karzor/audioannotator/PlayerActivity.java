@@ -17,13 +17,13 @@ public class PlayerActivity extends TabActivity {
 		setContentView(R.layout.activity_player);
 		setTitle("AudioAnnotator");
 		
-		String strSrcName = getIntent().getExtras().getString("SRC_NAME");
+		Bundle sendThis = getIntent().getExtras();
 		
 		TabHost tabHost = getTabHost();
 		//tabHost.setup();
 		
 		Intent intentPlayer = new Intent().setClass(this, TabPlayerActivity.class);
-		intentPlayer.putExtra("SRC_NAME", strSrcName);
+		intentPlayer.putExtras(sendThis);
 		TabSpec tabSpecPlayer = tabHost.newTabSpec("Player");
 		tabSpecPlayer.setIndicator("Player");
 		tabSpecPlayer.setContent(intentPlayer);
